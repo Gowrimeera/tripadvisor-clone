@@ -1,0 +1,329 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box ;
+}
+body{
+    font-family: "poppins",sans-serif;
+}
+.header{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    gap: 20px;
+    top: 0;
+    padding: 10px;
+    z-index: 1;
+    background-color: white;
+    position: sticky;
+}
+.header__s1{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    top: 0px;
+    align-items: center;
+}
+.header__s1 img{
+    width:40px;
+    height: 40px;
+    border-radius: 30px;
+}
+.header__s2 button{
+    background-color: black;
+    color: white;
+    padding-left: 20px;
+    border-radius: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.header__s2 button:hover{
+    background-color: transparent;
+    color: black;
+    border:solid black 1px;
+}
+.menu{
+    cursor:pointer;
+    z-index: 1;
+    position: relative;;
+}
+.menu__popup{
+    border: solid black 1px;
+    padding: 10px;
+    margin: 10px;
+    margin-left: 0px;
+    background-color: aliceblue;
+    font-size: 15px;
+    display: none;
+    position: absolute;
+
+}
+.menu__popup__s1{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-bottom: solid black 1px;
+    padding-right: 100px;
+    margin-top: 10px;
+}
+.menu__popup__s2{
+    border-bottom: solid black 1px;
+    padding-right: 100px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    padding: 10px;
+    gap: 5px;
+}
+.menu:hover .menu__popup{
+    display:inline-block;
+}
+.menu__popup__s2 p:hover{
+    background-color: white;
+    border:solid black 1px;
+    color:black;
+    padding-left: 5px;
+    border-radius: 5px;
+}
+.main h1{
+    margin-top: 50px;
+    z-index: 0;
+    align-items: center;
+    justify-content: center;
+}
+.main__s1{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    width: 100%;
+}
+.main__s1 p:hover{
+    border-bottom: solid black 2px;
+}
+.main__s2{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: solid black 1px;
+    width: 80%;
+    gap: 10px;
+    border-radius: 30px;
+    margin: auto;
+    margin-top: 30px
+}
+.main__s2 input{
+    border: none;
+    width: 100%;
+    font-size: 16px;
+    background-color: transparent;
+}
+.main__s2 button{
+    background-color: rgb(55, 198, 55);
+    color:solid black;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+    border: none;
+    font-size: 16px;
+}
+.main__s2 input:focus{
+    outline:none
+}
+.sale-image{
+    position: relative;
+    align-items: center;
+    z-index: 0;
+}
+.sale-image img{
+    width: 90%;
+    background-color: rgb(235, 176, 235);
+    margin-top: 10px;
+    border-radius: 30px;
+    height: 50%;
+    margin-left: 60px;
+}
+.sale-image__info{
+    border: none;
+    background-color: transparent;
+    padding: 5px;
+    position: absolute;
+    width: 35%;
+    top: 15%;
+    left: 17%;
+    animation-name: zoom;
+    animation-duration: 1s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    text-align: center;
+}
+.sale-image__info button{
+    background-color: rgb(139, 63, 139);
+    color: white;
+    font-size: 16px;
+    border: solid black 1px;
+    padding: 5px;
+    border-radius: 20px;
+    margin: auto;
+}
+@keyframes zoom{
+    0%{
+        transform:scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.recommend{
+    padding: 10px;
+}
+.recommend__container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+}
+.photo-card{
+    flex-grow:initial;
+    flex-basis: 25%;
+    text-align: center;
+    padding: 10px;
+    margin: auto;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.photo-card img{
+    width: 100%;
+    margin: auto;
+    height: 70%;
+}
+.photo-card:hover{
+    border: solid black 1px;
+    opacity:0.8;
+}
+
+.image-card{
+    flex-grow: 1;
+    flex-basis: 20%;
+    text-align: center;
+    margin-right: 10px;
+    padding: 10px;
+    justify-content: space-evenly;
+}
+.image-card img{
+    width: 100%;
+    margin: auto;
+    height: 80%;
+}
+.image-card:hover{
+    border: solid black 1px;
+    opacity:0.8;
+}
+.sale-image__2{
+    position: relative;
+    align-items: center;
+}
+.sale-image__2 img{
+    width: 100%;
+    margin-top: 10px;
+    height: 40%;
+    position: relative;
+}
+.sale-image__2__info{
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+    position: absolute;
+    width: 35%;
+    top: 8%;
+    left: 6%;
+    position: absolute;
+}
+.sale-image__2 button{
+    padding: 10px;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    margin-top: 5px;
+}
+.sale-image__2 button:hover{
+    border: solid black 1px;
+    color: black;
+    background-color: white;
+}
+.footer{
+    background-color: antiquewhite;
+    padding: 10px;
+    position: sticky;
+}
+.footer__s1 p{
+    padding: 5px;
+    margin-top: 10px;
+    gap: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.footer__s1 p:hover{
+    text-decoration: underline ;
+}
+.footer-s2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+.select-box{
+    width: 100%;
+    border: none;
+    padding: 5px;
+    padding-right: 300px;
+}
+.footer-s3__icon{
+    padding-left: 85%;
+}
+.footer-s4{
+    display: flex;
+}
+.footer-s4__sec{
+    display:block;
+}
+.footer-s4 img{
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+.footer-s4__s2__1{
+    display: flex;
+    gap: 10px;
+    list-style:none;
+}
+.footer-s4__s2__1 li{
+    text-decoration: underline;
+}
+@media screen and (max-width:800px){
+    body{
+        font-size: 11px;
+    }
+    .main__s1{
+       margin-left: 20px;
+    }
+    .sale-image{
+        margin-right: 65px;
+    }
+}
+@media screen and (max-width:600px){
+    .image-card{
+        flex-basis: 40%;
+    }
+}
